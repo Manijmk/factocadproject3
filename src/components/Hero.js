@@ -1,25 +1,44 @@
-import React from 'react';
-import HeroBgImage from '../assests/images/bg-4.png'; // Adjust the path as needed
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import HeroBgImage from '../assests/images/bg-4.png';
 
 const Hero = () => {
+  const [offsetY, setOffsetY] = useState(0);
+
+  // Parallax Effect on Scroll
+  const handleScroll = () => {
+    setOffsetY(window.scrollY * 0.5); // Adjust speed for smooth effect
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section
-      style={{ backgroundImage: `url(${HeroBgImage})` }}
-      className="bg-cover bg-center h-screen flex items-center relative"
-    >
-      {/* Dark Overlay */}
+    <section className="relative h-screen flex items-center justify-center text-center text-white">
+      {/* Parallax Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-transform"
+        style={{
+          backgroundImage: `url(${HeroBgImage})`,
+          transform: `translateY(${offsetY}px)`,
+        }}
+      ></div>
+
+      {/* Overlay for Better Text Visibility */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+
       {/* Content */}
-      <div className="container mx-auto text-center relative z-10">
-        <h1 className="text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display' }}>
-          Building Your Dream Home
-        </h1>
-        <p className="text-xl text-white mb-8" style={{ fontFamily: 'Roboto' }}>
-          We provide the best construction services for your dream projects.
-        </p>
-        <button className="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition duration-300" style={{ fontFamily: 'Roboto' }}>
+      <div className="relative z-10 max-w-2xl">
+        <h1 className="text-5xl font-bold leading-tight">Innovating Manufacturing Solutions</h1>
+        <p className="mt-4 text-lg">Advanced automation and digital transformation for industrial excellence.</p>
+        <a
+          href="#contact"
+          className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg"
+        >
           Get Started
-        </button>
+        </a>
       </div>
     </section>
   );
