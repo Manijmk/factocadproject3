@@ -32,7 +32,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-2xl">
         <h1 className="text-5xl font-bold leading-tight">Innovating Manufacturing Solutions</h1>
-        <p className="mt-4 text-lg">Advanced automation and digital transformation for industrial excellence.</p>
+        <p className="mt-4 text-lg">Innovative Digital Manufacturing, Expert Staffing, and Lean Processes</p>
         <a
           href="#contact"
           className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg"
