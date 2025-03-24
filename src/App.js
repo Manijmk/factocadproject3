@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DigitalManufacturing from "./components/DigitalManufacturing";
 
 
 function App() {
@@ -26,10 +27,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        {/* <Route path="/services/digital-manufacturing" element={<DigitalManufacturing />} />
-        <Route path="/services/staffing" element={<Staffing />} />
-        <Route path="/services/lean-manufacturing" element={<LeanManufacturing />} />
-        <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/services/digital-manufacturing" element={<DigitalManufacturing />} />
+        {/* <Route path="/services/staffing" element={<Staffing />} /> */}
+        {/* <Route path="/services/lean-manufacturing" element={<LeanManufacturing />} /> */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
       <Footer />
     </Router>
