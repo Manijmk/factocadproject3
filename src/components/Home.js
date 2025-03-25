@@ -7,7 +7,9 @@ import Staffing from "../assests/images/staffing-1.jpg";
 import LeanManufacImg from "../assests/images/ManufacturingEngineering.png";
 import Counter from './Counter';
 import ContactForm from './ContactForm';
-
+import CapabilitiesImage from "../assests/images/processplanning2.png";
+import { motion } from "framer-motion"; // Animation Library
+import { FaCogs, FaWarehouse, FaTools, FaClipboardList, FaDraftingCompass, FaProjectDiagram, FaRobot } from "react-icons/fa";
 
 const Home = () => {
 
@@ -87,6 +89,15 @@ const Home = () => {
     }
   }, [inView]);
 
+  const capabilitiesList = [
+    { text: "Installation & Commissioning", icon: <FaCogs /> },
+    { text: "Material Handling System Support", icon: <FaWarehouse /> },
+    { text: "Tool & Equipment Installation", icon: <FaTools /> },
+    { text: "Documentation & Training Manuals", icon: <FaClipboardList /> },
+    { text: "3D Plant Layout", icon: <FaDraftingCompass /> },
+    { text: "BOM Creation", icon: <FaProjectDiagram /> },
+    { text: "Robotic Simulation", icon: <FaRobot /> },
+  ];
   return (
     <>
       <section
@@ -188,6 +199,56 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-6 lg:px-12">
+
+          {/* Section Title */}
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-extrabold text-gray-900 uppercase">Our Capabilities</h2>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto mt-2"></div>
+            <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+              FACTOCAD provides cutting-edge automation and digital manufacturing solutions
+              to improve efficiency, scalability, and precision in various industrial applications.
+            </p>
+          </motion.div>
+
+          {/* Top - Large Image */}
+          <motion.div
+            className="w-full flex justify-center mb-12"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <img
+              src={CapabilitiesImage}
+              alt="Manufacturing Capabilities"
+              className="rounded-lg shadow-lg w-full md:max-w-5xl transform transition duration-300 hover:scale-105"
+            />
+          </motion.div>
+
+          {/* Capabilities List - Bigger Items */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            {capabilitiesList.map((item, index) => (
+              <div key={index} className="flex items-center gap-5 p-6 bg-white rounded-lg shadow-lg text-gray-900 font-semibold text-xl hover:bg-yellow-500 hover:text-white transition-all duration-300">
+                <span className="text-3xl text-yellow-500">{item.icon}</span>
+                {item.text}
+              </div>
+            ))}
+          </motion.div>
+
         </div>
       </section>
 

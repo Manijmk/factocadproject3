@@ -78,7 +78,7 @@ const About = () => {
   //   </div>
   // </section>
 
-  <section className="py-20 bg-gray-100">
+  <section className="py-20 my-10 bg-gray-100">
   <div className="container mx-auto px-6 md:px-12 lg:px-20">
     {/* Section Heading */}
     <div className="text-center mb-12">
@@ -104,9 +104,9 @@ const About = () => {
           Transforming Manufacturing with Smart Automation
         </h2>
         <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-          FACTOCAD Robotics provides cutting-edge **digital manufacturing solutions** for  
-          **Automotive, Aerospace, Rail Transportation, Heavy Machinery, and Construction Equipment**.  
-          Our expertise in **turnkey automation** ensures high efficiency, **precision**, and **scalability**.
+          FACTOCAD Robotics provides cutting-edge Digital Manufacturing Solutions for  
+          Automotive, Aerospace, Rail Transportation, Heavy Machinery, and Construction Equipment.  
+          Our expertise in Turnkey Automation ensures High Efficiency, Precision, and Scalability.
         </p>
 
         {/* Key Offerings - Modern Bullet Points */}

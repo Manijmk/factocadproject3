@@ -3,7 +3,7 @@ import image from "../assests/images/ManufacturingEngineering.png"; // Ensure co
 const DigitalManufacturing = () => {
 
     const services = [
-        { title: "Stamping", image: image, description: "High-precision metal forming services for automotive and industrial applications." },
+        {id:"stamping", title: "Stamping", image: image, description: "High-precision metal forming services for automotive and industrial applications." },
         { title: "Body In White (BIW)", image: image, description: "Comprehensive BIW solutions ensuring structural integrity and design precision." },
         { title: "TCF (Assembly)", image: image, description: "Total assembly solutions integrating advanced automation for efficiency." },
         { title: "Logistics Engineering", image: image, description: "Optimized logistics strategies to streamline supply chain operations." },
@@ -47,3 +47,6 @@ const DigitalManufacturing = () => {
 };
 
 export default DigitalManufacturing;
+
+
+
