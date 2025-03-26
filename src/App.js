@@ -6,6 +6,10 @@ import Services from "./components/Services";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DigitalManufacturing from "./components/DigitalManufacturing";
+import BodyInWhite from "./components/BodyInWhite";
+import Staffing from "./components/Staffing";
+import ScrollToTop from "./components/ScrollToTop";
+import ContactForm from "./components/ContactForm";
 
 
 function App() {
@@ -22,15 +26,17 @@ function App() {
     // </div>
 
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/digital-manufacturing" element={<DigitalManufacturing />} />
-        {/* <Route path="/services/staffing" element={<Staffing />} /> */}
+        <Route path="/services/digital-manufacturing/body-in-white" element={<BodyInWhite />} />
+        <Route path="/services/staffing" element={<Staffing />} />
         {/* <Route path="/services/lean-manufacturing" element={<LeanManufacturing />} /> */}
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<ContactForm />} />
       </Routes>
       <Footer />
     </Router>

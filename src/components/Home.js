@@ -168,6 +168,8 @@ const Home = () => {
         </div>
       </section>
 
+
+      {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           {/* Section Heading */}
@@ -202,6 +204,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Capabilities */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-6 lg:px-12">
 

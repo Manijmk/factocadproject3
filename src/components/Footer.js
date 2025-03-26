@@ -30,7 +30,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact Info</h3>
             <ul className="text-gray-400 space-y-2">
               <li>FACTOCAD ROBOTICS AND AUTOMATION INDIA PVT LTD</li>
-              <li>No.941,pasumpon nagar ,kilpudhupakkam salai,</li>
+              <li>No.941,Pasumpon Nagar, Kilpudhupakkam Salai,</li>
               <li>Cheyyar -604407</li>
               <li>Email: sales@factocad-robotics.com</li>
               {/* <li>Phone: +123 456 7890</li> */}

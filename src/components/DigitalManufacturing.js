@@ -1,20 +1,61 @@
 import image from "../assests/images/ManufacturingEngineering.png"; // Ensure correct path
+import { useNavigate } from "react-router-dom";
 
 const DigitalManufacturing = () => {
 
     const services = [
-        {id:"stamping", title: "Stamping", image: image, description: "High-precision metal forming services for automotive and industrial applications." },
-        { title: "Body In White (BIW)", image: image, description: "Comprehensive BIW solutions ensuring structural integrity and design precision." },
-        { title: "TCF (Assembly)", image: image, description: "Total assembly solutions integrating advanced automation for efficiency." },
-        { title: "Logistics Engineering", image: image, description: "Optimized logistics strategies to streamline supply chain operations." },
-        { title: "Mechanical Design", image: image, description: "Innovative mechanical designs tailored to meet specific engineering requirements." },
-        { title: "Paint Shop", image: image, description: "State-of-the-art paint application services ensuring durability and aesthetics." },
+        {
+            id: "body-in-white", title: "Body In White (BIW)", image: image,
+            description: "Comprehensive BIW solutions ensuring structural integrity and design precision."
+        },
+        {
+            id: "stamping", title: "Stamping", image: image,
+            description: "High-precision metal forming services for automotive and industrial applications."
+        },
+        {
+            id: "assembly", title: "TCF (Assembly)", image: image,
+            description: "Total assembly solutions integrating advanced automation for efficiency."
+        },
+        {
+            id: "logistics", title: "Logistics Engineering", image: image,
+            description: "Optimized logistics strategies to streamline supply chain operations."
+        },
+        {
+            id: "mechanical", title: "Mechanical Design", image: image,
+            description: "Innovative mechanical designs tailored to meet specific engineering requirements."
+        },
+        {
+            id: "paintshop", title: "Paint Shop", image: image,
+            description: "State-of-the-art paint application services ensuring durability and aesthetics."
+        },
     ];
-
+    const navigate = useNavigate();
 
     return (
-        <section className="pt-24 my-10 px-6 text-gray-800 bg-gray-100">
-            <div className="container mx-auto">
+        <section>
+
+            <div
+                className="relative bg-cover bg-center h-120 flex items-center justify-center text-white"
+                style={{ backgroundImage: `url(${image})` }}
+            >
+                <div className="absolute inset-0 bg-black opacity-50"></div>
+                <div className="relative text-center">
+                    <h1 className="text-5xl font-bold">Body In White</h1>
+                    <p className="mt-2 text-lg">
+                        <span className="text-gray-300 cursor-pointer" onClick={() => navigate("/")}>
+                            Home
+                        </span>{" "}
+                        {" > "}
+                        <span className="text-gray-300 cursor-pointer" onClick={() => navigate("/services/digital-manufacturing")}>
+                            Digital Manufacturing
+                        </span>{" "}
+                        {" > "}
+                        <span className="text-white font-semibold">Body In White</span>
+                    </p>
+                </div>
+            </div>
+
+            <div className="container mx-auto pt-24 my-10 px-6 text-gray-800 bg-gray-100">
                 {/* Introduction Section */}
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-blue-600 mb-4">DIGITAL MANUFACTURING</h2>
@@ -35,8 +76,11 @@ const DigitalManufacturing = () => {
                             <img src={service.image} alt={service.title} className="w-full h-56 object-cover" />
                             <div className="p-6">
                                 <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
-                                <p className="text-gray-600">{service.description}</p>
-                                <a href="#" className="text-blue-500 mt-4 inline-block">Learn More →</a>
+                                <p className="text-gray-600"
+                                >
+                                    {service.description}
+                                </p>
+                                <a onClick={() => navigate(`/services/digital-manufacturing/${service.id}`)} className="text-blue-500 mt-4 inline-block" >Learn More →</a>
                             </div>
                         </div>
                     ))}
