@@ -10,6 +10,14 @@ import BodyInWhite from "./components/BodyInWhite";
 import Staffing from "./components/Staffing";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactForm from "./components/ContactForm";
+import Career from "./components/Career";
+import NotFound from "./components/NotFound";
+import Fallback from "./components/Fallback";
+import Stamping from "./components/Stamping";
+import Logistics from "./components/Logistics";
+import MechanicalDesign from "./components/MechanicalDesign";
+import PaintShop from "./components/PaintShop";
+import LeanManufacturing from "./components/LeanManufacturing";
 
 
 function App() {
@@ -34,9 +42,20 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/digital-manufacturing" element={<DigitalManufacturing />} />
         <Route path="/services/digital-manufacturing/body-in-white" element={<BodyInWhite />} />
+        <Route path="/services/digital-manufacturing/stamping" element={<Stamping />} />
+        <Route path="/services/digital-manufacturing/logistics-engineering" element={<Logistics />} />
+        <Route path="/services/digital-manufacturing/mechanical-design" element={<MechanicalDesign />} />
+        <Route path="/services/digital-manufacturing/paintshop" element={<PaintShop />} />
+
         <Route path="/services/staffing" element={<Staffing />} />
-        {/* <Route path="/services/lean-manufacturing" element={<LeanManufacturing />} /> */}
+        <Route path="/services/lean-manufacturing" element={<LeanManufacturing />} />
+
         <Route path="/contact" element={<ContactForm />} />
+        <Route path="/career" element={<Career />} />
+
+
+        <Route path="*" element={<NotFound />} /> {/* Fallback Route */}
+        <Route path="/services/:serviceName" element={<Fallback />} />
       </Routes>
       <Footer />
     </Router>

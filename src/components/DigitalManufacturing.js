@@ -1,15 +1,20 @@
 import image from "../assests/images/ManufacturingEngineering.png"; // Ensure correct path
+import BodyInWhiteImg from "../assests/images/BodyInWhite.png"
+import StampingImg from "../assests/images/Metalstamping.jpg"
+import LogisticsImg from "../assests/images/LogisticsEngineering2.jpg"
+import MechanicalImg from "../assests/images/mechanical_engineering2.jpeg"
+import PaintShopImg from "../assests/images/paintshop1.jpg"
 import { useNavigate } from "react-router-dom";
 
 const DigitalManufacturing = () => {
 
     const services = [
         {
-            id: "body-in-white", title: "Body In White (BIW)", image: image,
+            id: "body-in-white", title: "Body In White (BIW)", image: BodyInWhiteImg,
             description: "Comprehensive BIW solutions ensuring structural integrity and design precision."
         },
         {
-            id: "stamping", title: "Stamping", image: image,
+            id: "stamping", title: "Stamping", image: StampingImg,
             description: "High-precision metal forming services for automotive and industrial applications."
         },
         {
@@ -17,15 +22,15 @@ const DigitalManufacturing = () => {
             description: "Total assembly solutions integrating advanced automation for efficiency."
         },
         {
-            id: "logistics", title: "Logistics Engineering", image: image,
+            id: "logistics-engineering", title: "Logistics Engineering", image: LogisticsImg,
             description: "Optimized logistics strategies to streamline supply chain operations."
         },
         {
-            id: "mechanical", title: "Mechanical Design", image: image,
+            id: "mechanical-design", title: "Mechanical Design", image: MechanicalImg,
             description: "Innovative mechanical designs tailored to meet specific engineering requirements."
         },
         {
-            id: "paintshop", title: "Paint Shop", image: image,
+            id: "paintshop", title: "Paint Shop", image: PaintShopImg,
             description: "State-of-the-art paint application services ensuring durability and aesthetics."
         },
     ];
@@ -40,17 +45,17 @@ const DigitalManufacturing = () => {
             >
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="relative text-center">
-                    <h1 className="text-5xl font-bold">Body In White</h1>
+                    <h1 className="text-5xl font-bold">Digital Manufacturing</h1>
                     <p className="mt-2 text-lg">
                         <span className="text-gray-300 cursor-pointer" onClick={() => navigate("/")}>
                             Home
                         </span>{" "}
                         {" > "}
-                        <span className="text-gray-300 cursor-pointer" onClick={() => navigate("/services/digital-manufacturing")}>
-                            Digital Manufacturing
+                        <span className="text-gray-300 cursor-pointer" onClick={() => navigate("/services")}>
+                            Services
                         </span>{" "}
                         {" > "}
-                        <span className="text-white font-semibold">Body In White</span>
+                        <span className="text-white font-semibold">Digital Manufacturing</span>
                     </p>
                 </div>
             </div>
