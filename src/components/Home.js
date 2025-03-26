@@ -10,8 +10,11 @@ import ContactForm from './ContactForm';
 import CapabilitiesImage from "../assests/images/processplanning2.png";
 import { motion } from "framer-motion"; // Animation Library
 import { FaCogs, FaWarehouse, FaTools, FaClipboardList, FaDraftingCompass, FaProjectDiagram, FaRobot } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -114,12 +117,12 @@ const Home = () => {
           </h1>
           <p className="mt-4 text-lg">Build and Implement Comprehensive
             Digital Frameworks and Solutions</p>
-          <a
-            href="/services"
+          <p
+              onClick={() => navigate("/services")}
             className="mt-6 inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-md transition"
           >
             Get Started
-          </a>
+          </p>
         </div>
       </section>
 
@@ -157,12 +160,12 @@ const Home = () => {
                 <li>✅ Robotic Welding & Smart Manufacturing</li>
                 <li>✅ Process Planning & Simulation</li>
               </ul>
-              <a
-                href="/about"
+              <p
+                 onClick={() => navigate("/about")}
                 className="mt-8 inline-block px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold text-lg rounded-md transition"
               >
                 Learn More
-              </a>
+              </p>
             </div>
           </div>
         </div>

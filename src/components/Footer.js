@@ -1,6 +1,12 @@
 import React from 'react';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaX, FaXTwitter } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
+
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-gray-800 text-white py-12">
       <div className="container mx-auto px-6">
@@ -9,7 +15,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">About Us</h3>
             <p className="text-gray-400">
-            FACTOCAD is a specialized in automotive Turnkey Automation Solution provider for all kind of work in  different applications and requirements. 
+              FACTOCAD is a specialized in automotive Turnkey Automation Solution provider for all kind of work in  different applications and requirements.
             </p>
           </div>
 
@@ -17,11 +23,11 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition duration-300">About</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition duration-300">Services</a></li>
-              <li><a href="#projects" className="text-gray-400 hover:text-white transition duration-300">Projects</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+              <li><p onClick={() => navigate("/")} className="text-gray-400 hover:text-white transition duration-300">Home</p></li>
+              <li><p onClick={() => navigate("/about")} className="text-gray-400 hover:text-white transition duration-300">About</p></li>
+              <li><p onClick={() => navigate("/services")} className="text-gray-400 hover:text-white transition duration-300">Services</p></li>
+              <li><p onClick={() => navigate("/career")} className="text-gray-400 hover:text-white transition duration-300">Careers</p></li>
+              <li><p onClick={() => navigate("/contact")} className="text-gray-400 hover:text-white transition duration-300">Contact</p></li>
             </ul>
           </div>
 
@@ -41,10 +47,18 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">Facebook</a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">Twitter</a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">Instagram</a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">LinkedIn</a>
+              <a href="#" className="flex items-center text-gray-400 hover:text-white transition duration-300">
+                <FaFacebookF className="mr-2" /> 
+              </a>
+              <a href="#" className="flex items-center text-gray-400 hover:text-white transition duration-300">
+                <FaXTwitter className="mr-2" /> 
+              </a>
+              <a href="#" className="flex items-center text-gray-400 hover:text-white transition duration-300">
+                <FaInstagram className="mr-2" /> 
+              </a>
+              <a href="#" className="flex items-center text-gray-400 hover:text-white transition duration-300">
+                <FaLinkedinIn className="mr-2" /> 
+              </a>
             </div>
           </div>
         </div>
